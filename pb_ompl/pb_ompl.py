@@ -140,7 +140,7 @@ class PBOMPL():
         self.obstacles.remove(obstacle_id)       
 
     def is_state_valid(self,state):
-        self.robot.set_state(self.stat_to_list(state))
+        self.robot.set_state(self.state_to_list(state))
         for link1,link2 in self.check_link_pairs:
             if utils.pairwise_link_collision(self.robot_id, link1, self.robot_id, link2):
                 # print(get_body_name(body), get_link_name(body, link1), get_link_name(body, link2))
